@@ -13,12 +13,13 @@ const Header = () => {
         <>
             <Navbar collapseOnSelect expand="lg" bg="dark" sticky="top" variant="dark">
                 <Container>
-                    <Navbar.Brand href="/home">TRAVELERZ</Navbar.Brand>
+                    <Navbar.Brand href="/home">SPEED WORLD</Navbar.Brand>
 
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav className="me-auto nav">
                             <Link className="navLink" to="/home">Home</Link>
+                            <Link className="navLink" to="/explores">Explores</Link>
                             {user?.email &&
                                 <Link className="navLink" to="/allorders">All Orders</Link>
                             }
@@ -28,7 +29,7 @@ const Header = () => {
 
 
                             {user.email &&
-                                <Link className="navLink" to="/addplaces">Add Places</Link>
+                                <Link className="navLink" to="/addbikes">Add Bike</Link>
                             }
 
 

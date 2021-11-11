@@ -14,6 +14,7 @@ import AddPlaces from './Components/AddPlaces/AddPlaces';
 import Allorders from './Components/Allorders/Allorders';
 import Myorders from './Components/Myorders/Myorders';
 import Register from './Components/Login/Register/Register';
+import Explores from './Components/Explores/Explores';
 
 
 function App() {
@@ -31,11 +32,14 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/places/:placeId">
+            <Route path="/explores">
+              <Explores></Explores>
+            </Route>
+            <PrivateRoute path="/bikes/:bikeID">
               <PlaceDetails></PlaceDetails>
             </PrivateRoute>
 
-            <PrivateRoute path="/addplaces">
+            <PrivateRoute path="/addbikes">
               <AddPlaces></AddPlaces>
             </PrivateRoute>
             <PrivateRoute path="/allorders">

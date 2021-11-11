@@ -19,21 +19,21 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div className="footer-col">
-                            <h4 className="h4-cls">TRAVEL TIPS</h4>
+                            <h4 className="h4-cls">MENU</h4>
                             <ul>
-                                <li><Link to="#">START HERE</Link></li>
-                                <li><Link to="#">BLOG</Link></li>
-                                <li><Link to="#">DESTINATION</Link></li>
-                                <li><Link to="#">TRAVEL INSURANCE</Link></li>
+                                <li><Link to="#">Bike Price</Link></li>
+                                <li><Link to="#">Brands</Link></li>
+                                <li><Link to="#">Discount</Link></li>
+                                <li><Link to="#">Bike Reviews</Link></li>
 
                             </ul>
                         </div>
                         <div className="footer-col">
                             <h4 className="h4-cls">RESOURCES</h4>
                             <ul>
-                                <li><Link to="#">CATEGORIES</Link></li>
+                                <li><Link to="#">Video</Link></li>
                                 <li><Link to="#">CITY GUIDES</Link></li>
-                                <li><Link to="#">TRAVEL RESOURCES</Link></li>
+                                <li><Link to="#">Showrooms</Link></li>
 
                             </ul>
                         </div>
