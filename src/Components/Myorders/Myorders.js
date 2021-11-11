@@ -63,10 +63,10 @@ const Myorders = () => {
                 <Table striped bordered hover responsive size="sm">
                     <thead>
                         <tr>
-                            <th>Order Id</th>
+                            <th>Bike Name</th>
                             <th>MAIL</th>
                             <th>ADDRESS</th>
-                            <th>Cost</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>

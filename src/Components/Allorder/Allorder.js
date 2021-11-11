@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Allorder = (props) => {
-    const { _id, status, address, mail } = props.allorders;
+    const { _id, bikeName, status, address, mail } = props.allorders;
     return (
         <>
             <tr>
-                <td>{_id}</td>
+                <td>{bikeName}</td>
                 <td>{mail}</td>
                 <td>{address}</td>
                 {

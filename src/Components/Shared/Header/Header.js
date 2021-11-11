@@ -7,7 +7,7 @@ import useAuth from './../../../hooks/useAuth';
 
 
 const Header = () => {
-    const { user, logOut } = useAuth()
+    const { user, logOut, admin } = useAuth()
     return (
 
         <>
@@ -20,16 +20,13 @@ const Header = () => {
                         <Nav className="me-auto nav">
                             <Link className="navLink" to="/home">Home</Link>
                             <Link className="navLink" to="/explores">Explores</Link>
-                            {user?.email &&
-                                <Link className="navLink" to="/allorders">All Orders</Link>
-                            }
-                            {user?.email &&
-                                <Link className="navLink" to="/myorders">My Orders</Link>
-                            }
 
 
-                            {user.email &&
-                                <Link className="navLink" to="/addbikes">Add Bike</Link>
+                            {user.email && !admin &&
+                                <Link className="navLink" to="/dashboard">Dashboard</Link>
+                            }
+                            {user.email && admin &&
+                                <Link className="navLink" to="/dashboard/allorders">Dashboard</Link>
                             }
 
 

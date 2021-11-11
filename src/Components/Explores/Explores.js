@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Spinner } from 'react-bootstrap';
+import Footer from '../Shared/Footer/Footer';
 import Explore from './../Explore/Explore';
 
 const Explores = () => {
@@ -37,6 +38,7 @@ const Explores = () => {
                     </div>
                 </div>
             }
+            <Footer></Footer>
         </div>
     );
 };

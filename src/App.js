@@ -4,7 +4,6 @@ import './App.css';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
-import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
@@ -12,9 +11,9 @@ import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 import PlaceDetails from './Components/PlaceDetails/PlaceDetails';
 import AddPlaces from './Components/AddPlaces/AddPlaces';
 import Allorders from './Components/Allorders/Allorders';
-import Myorders from './Components/Myorders/Myorders';
 import Register from './Components/Login/Register/Register';
 import Explores from './Components/Explores/Explores';
+import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 
 
 function App() {
@@ -39,15 +38,12 @@ function App() {
               <PlaceDetails></PlaceDetails>
             </PrivateRoute>
 
-            <PrivateRoute path="/addbikes">
-              <AddPlaces></AddPlaces>
+
+
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
             </PrivateRoute>
-            <PrivateRoute path="/allorders">
-              <Allorders></Allorders>
-            </PrivateRoute>
-            <PrivateRoute path="/myorders">
-              <Myorders></Myorders>
-            </PrivateRoute>
+
 
             <Route path="/login">
               <Login></Login>
@@ -59,7 +55,7 @@ function App() {
               <NotFound></NotFound>
             </Router>
           </Switch>
-          <Footer></Footer>
+
         </Router>
       </AuthProvider>
 

@@ -1,12 +1,10 @@
 import React from 'react';
-
+import "./NotFound.css"
 const NotFound = () => {
     return (
-        <div>
-            <img src="https://templatefor.net/wp-content/uploads/2019/10/Lost-in-the-Clouds-Error-404.jpg" width="100%" height="600px" alt="" />
+        <div >
+            <img className="image" src="https://drudesk.com/sites/default/files/2018-02/404-error-page-not-found.jpg" alt="" />
         </div>
-
-
     );
 };
 
