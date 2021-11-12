@@ -3,7 +3,7 @@ import './ManageProduct.css'
 import { Link } from 'react-router-dom';
 
 const ManageProduct = (props) => {
-    const { _id, name, img, price } = props.mainservice;
+    const { _id, name, img, price } = props?.mainservice;
     return (
         // single service 
         <div className="container">

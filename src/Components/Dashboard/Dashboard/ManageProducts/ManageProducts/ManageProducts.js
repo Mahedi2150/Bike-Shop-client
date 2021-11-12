@@ -13,7 +13,7 @@ const ManageProducts = () => {
 
     // delete service as like order 
     const handelDeleteOrder = id => {
-        const proceed = window.confirm('Are you sure, you want to delete order?');
+        const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
             const url = `http://localhost:5000/bikes/${id}`;
             fetch(url, {
@@ -23,7 +23,7 @@ const ManageProducts = () => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         alert('Deleted Successfully.');
-                        const remainingOrders = services.filter(order => order._id !== id);
+                        const remainingOrders = services.filter(order => order?._id !== id);
                         setServices(remainingOrders);
                     }
                 });

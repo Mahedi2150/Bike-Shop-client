@@ -35,14 +35,9 @@ function App() {
             <PrivateRoute path="/bikes/:bikeID">
               <PlaceDetails></PlaceDetails>
             </PrivateRoute>
-
-
-
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>
-
-
             <Route path="/login">
               <Login></Login>
             </Route>

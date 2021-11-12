@@ -54,7 +54,7 @@ function Dashboard(props) {
         <div>
             <Toolbar />
             <Divider />
-            <ul style={{ textAlign: "left" }}>
+            <ul style={{ textAlign: "left" }} >
                 <li><Link to="/home" style={{ textDecoration: "none" }}>Home</Link></li>
                 {
                     !admin && <Box>
@@ -101,9 +101,11 @@ function Dashboard(props) {
             <CssBaseline />
             <AppBar
                 position="fixed"
+                style={{ backgroundColor: "#212529" }}
                 sx={{
                     width: { sm: `calc(100% - ${drawerWidth}px)` },
                     ml: { sm: `${drawerWidth}px` },
+
                 }}
             >
                 <Toolbar>
