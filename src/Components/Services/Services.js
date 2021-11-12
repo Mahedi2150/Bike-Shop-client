@@ -25,7 +25,7 @@ const Services = () => {
                 </Button> :
                 <div id="services" className="container">
 
-                    <h2 className="m-5 mt-5">Best Bikes in Bangladesh</h2>
+                    <h2 className="m-5">Best Bikes in Bangladesh</h2>
                     <div className="row row-cols-1 row-cols-md-1 text-lg-start g-5 mt-5 ">
                         <Row xs={1} md={2} lg={3} className="g-4 ">
                             {

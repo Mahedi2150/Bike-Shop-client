@@ -9,8 +9,6 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 
 import PlaceDetails from './Components/PlaceDetails/PlaceDetails';
-import AddPlaces from './Components/AddPlaces/AddPlaces';
-import Allorders from './Components/Allorders/Allorders';
 import Register from './Components/Login/Register/Register';
 import Explores from './Components/Explores/Explores';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';

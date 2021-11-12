@@ -22,19 +22,19 @@ import DashboardHome from './DashboardHome/DashboardHome';
 
 import {
     Switch,
-    Route,
+
     Link,
     useRouteMatch
 } from "react-router-dom";
-import { color } from '@mui/system';
-import { Navbar, Button } from 'react-bootstrap';
 import MakeAdmin from './MakeAdmin/MakeAdmin';
 import Payment from './Payment/Payment';
-import Review from './Review/Review';
 import useAuth from './../../../hooks/useAuth';
 import Allorders from './../../Allorders/Allorders';
-import AddPlaces from './../../AddPlaces/AddPlaces';
-import ManageProducts from './ManageProducts/ManageProducts';
+import AdminRoute from './../../Login/AdminRoute/AdminRoute';
+import UserRoute from './../../Login/UserRoute/UserRoute'
+import AddReview from './Review/AddReview/AddReview';
+import Addproducts from './AddProducts/Addproducts';
+import ManageProducts from './ManageProducts/ManageProducts/ManageProducts';
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -72,7 +72,7 @@ function Dashboard(props) {
                     </Box>
                 }
                 <Divider />
-                <li> <Link to="home" onClick={logOut} style={{ textDecoration: "none" }}> Log Out</Link></li>
+                <li> <Link to="/" onClick={logOut} style={{ textDecoration: "none" }}> Log Out</Link></li>
             </ul>
 
 
@@ -159,27 +159,30 @@ function Dashboard(props) {
             >
 
                 <Switch>
-                    <Route exact path={path} >
+                    <UserRoute exact path={path} >
                         <DashboardHome></DashboardHome>
-                    </Route>
-                    <Route path={`${path}/makeAdmin`}>
-                        <MakeAdmin></MakeAdmin>
-                    </Route>
-                    <Route path={`${path}/payment`}>
+                    </UserRoute>
+
+                    <UserRoute path={`${path}/payment`}>
                         <Payment></Payment>
-                    </Route>
-                    <Route path={`${path}/review`}>
-                        <Review></Review>
-                    </Route>
-                    <Route path={`${path}/allorders`}>
+                    </UserRoute>
+                    <UserRoute path={`${path}/review`}>
+                        <AddReview></AddReview>
+                    </UserRoute>
+
+                    <AdminRoute path={`${path}/makeAdmin`}>
+                        <MakeAdmin></MakeAdmin>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/allorders`}>
                         <Allorders></Allorders>
-                    </Route>
-                    <Route path={`${path}/addbikes`}>
-                        <AddPlaces></AddPlaces>
-                    </Route>
-                    <Route path={`${path}/manageproducts`}>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/addbikes`}>
+                        <Addproducts></Addproducts>
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageproducts`}>
                         <ManageProducts></ManageProducts>
-                    </Route>
+                    </AdminRoute>
+
                 </Switch>
 
             </Box>

@@ -7,7 +7,7 @@ const Service = (props) => {
     const descrip = Description?.slice(0, 200);
     return (
         <div className="container">
-            {/* <div className="row g-0 border border-warning mb-5 p-1 ">
+            {/*  <div className="row g-0 border border-warning mb-5 p-1 ">
                 <div className="col-md-4 ">
                     <img src={img} className="img-fluid rounded-start" alt="..." />
                 </div>

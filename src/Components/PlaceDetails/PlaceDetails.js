@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
 import Orderform from '../Orderform/Orderform';
 // import axios from 'axios';
 import "./PlaceDetails.css"

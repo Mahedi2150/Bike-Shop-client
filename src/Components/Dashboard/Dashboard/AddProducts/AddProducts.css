@@ -1,22 +1,21 @@
-.add-places {
+.add-product {
   background-image: url("https://www.motorcyclistonline.com/resizer/oai2t_l8jX5nYVEZgYtG6Nd5-KY=/1440x0/filters:focal(45x45:55x55)/cloudfront-us-east-1.images.arcpublishing.com/octane/2KH3ONBYSTA2C5VMMXFXRHBFSQ.jpg");
   background-size: cover;
-  object-fit: contain;
   width: 100%;
   height: 100vh;
 }
 
-.add-places form {
+.add-product form {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  width: 80%;
+  width: 60%;
   align-items: center;
   position: absolute;
   text-align: center;
   top: 50%;
-  left: 50%;
+  left: 55%;
   transform: translate(-50%, -50%);
   background: linear-gradient(
     rgba(255, 255, 255, 0.452),
@@ -24,7 +23,7 @@
   );
 }
 
-.add-places form input,
+.add-product form input,
 textarea {
   color: black;
   background-color: #ffffff63;

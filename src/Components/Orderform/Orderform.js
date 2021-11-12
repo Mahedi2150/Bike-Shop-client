@@ -3,8 +3,6 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
 import "./Orderform.css"
-import { useState } from 'react';
-import { Alert } from '@mui/material';
 const Orderform = ({ bikes }) => {
     const { name } = bikes;
 

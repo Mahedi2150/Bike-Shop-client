@@ -1,8 +1,11 @@
+
+
+
 import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
-import "./AddPlaces.css"
-const AddPlaces = () => {
+import "./AddProducts.css"
+const Addproducts = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
@@ -15,7 +18,7 @@ const AddPlaces = () => {
             })
     };
     return (
-        <div className="add-places">
+        <div className="add-product">
             <form className="pb-5" onSubmit={handleSubmit(onSubmit)}>
                 <h2 className="pt-5 border-bottom border-3 border-success"> Add a Bike</h2>
                 <input {...register("name", { required: true })} placeholder="Name" />
@@ -31,4 +34,4 @@ const AddPlaces = () => {
     );
 };
 
-export default AddPlaces;
+export default Addproducts;
