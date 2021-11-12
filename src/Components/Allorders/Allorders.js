@@ -24,7 +24,7 @@ const Allorders = () => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         alert('Deleted Successfully.');
-                        const remainingOrders = allorders.filter(order => order._id !== id);
+                        const remainingOrders = allorders.filter(order => order?._id !== id);
                         setAllorders(remainingOrders);
                     }
                 });

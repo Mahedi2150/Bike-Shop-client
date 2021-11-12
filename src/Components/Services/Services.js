@@ -25,17 +25,15 @@ const Services = () => {
                 </Button> :
                 <div id="services" className="container">
 
-                    <h2 className="m-5">Best Bikes in Bangladesh</h2>
-                    <div className="row row-cols-1 row-cols-md-1 text-lg-start g-5 mt-5 ">
-                        <Row xs={1} md={2} lg={3} className="g-4 ">
-                            {
-                                services.slice(0, 6).map(service => <Service
-                                    key={service.id}
-                                    service={service}
-                                ></Service>)
-                            }
-                        </Row>
-                    </div>
+                    <h2 className="my-5 pb-3 border-bottom border-3 border-success">Best Bikes in Bangladesh</h2>
+                    <Row xs={1} md={2} lg={3} >
+                        {
+                            services.slice(0, 6).map(service => <Service
+                                key={service.id}
+                                service={service}
+                            ></Service>)
+                        }
+                    </Row>
                 </div>
             }
         </div>

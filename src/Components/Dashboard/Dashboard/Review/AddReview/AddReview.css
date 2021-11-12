@@ -7,3 +7,9 @@
   background-color: rgba(7, 7, 7, 0.726);
   background-blend-mode: darken;
 }
+.addreview {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.315),
+    rgba(255, 255, 255, 0.445)
+  );
+}

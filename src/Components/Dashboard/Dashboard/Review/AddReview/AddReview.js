@@ -44,12 +44,12 @@ const AddReview = () => {
 
     return (
         <div className=" bgg">
-            <h2 className="fw-bold text-white m-2 pt-5">Say About Our Website</h2>
-            <p className="text-warning">Please Leave Review*</p>
+            {/* <p className="text-warning">Please Leave Review*</p> */}
             <div className="row p-2 mb-5">
-                <div className="col-md-6 col-12 mx-auto  mb-5 bg2">
+                <h2 className="fw-bold text-white m-2 pt-5 ">Say About Our Website</h2>
+                <div className="col-md-6 col-12 mx-auto addreview mb-5 bg2 ">
 
-                    <form className="bg-white px-4" onSubmit={handleSubmit(onSubmit)}>
+                    <form className=" px-4 pt-5" onSubmit={handleSubmit(onSubmit)}>
                         <input disabled className="w-100 mt-2 p-2 " value={user?.displayName} />
                         <br />
                         <textarea className="w-100 mt-2" placeholder="*Review Details" {...register("desc", { required: true })} />
@@ -65,7 +65,7 @@ const AddReview = () => {
                                 }}
                             >
                                 <Rating
-                                    sx={{ color: 'red' }}
+                                    sx={{ color: 'golden' }}
                                     name="hover-feedback"
                                     value={value}
                                     precision={0.5}
@@ -75,7 +75,7 @@ const AddReview = () => {
                                     onChangeActive={(event, newHover) => {
                                         setHover(newHover);
                                     }}
-                                    emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+                                    emptyIcon={<StarIcon style={{ opacity: 1 }} fontSize="inherit" />}
                                 />
                                 {value !== null && (
                                     <div>
@@ -89,7 +89,7 @@ const AddReview = () => {
 
                         {(errors.name || errors.desc || errors.from || errors.to || errors.by || errors.price) && <span className="text-danger">*All field are required</span>}
                         <br />
-                        <input className="btn btn-danger mb-2 rounded-pill ps-5 pe-5" type="submit" />
+                        <input className="btn btn-primary mb-2 rounded-pill ps-5 pe-5" type="submit" />
                     </form>
                 </div>
 

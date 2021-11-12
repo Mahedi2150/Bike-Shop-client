@@ -1,5 +1,5 @@
 import React from 'react';
-import banner1 from "../../../images/bike1.jpg"
+import banner1 from "../../../images/bike1.png"
 import banner2 from "../../../images/bike2.jpg"
 import banner3 from "../../../images/bike4.jpg"
 import "./Banner.css"
@@ -11,7 +11,7 @@ const Banner = () => {
             className="carousel slide "
             data-bs-ride="carousel"
         >
-            <div className="carousel-inner mt-5">
+            <div className="carousel-inner ">
                 <div className="carousel-item active">
                     <div
                         className="
@@ -20,7 +20,7 @@ const Banner = () => {
                 bg-gradient
                 d-flex
                 align-items-center
-                m-5
+                m-3
               "
                     >
                         <div className="col-lg-7">

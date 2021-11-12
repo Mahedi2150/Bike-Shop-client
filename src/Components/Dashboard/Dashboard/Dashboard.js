@@ -6,12 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -35,6 +29,7 @@ import UserRoute from './../../Login/UserRoute/UserRoute'
 import AddReview from './Review/AddReview/AddReview';
 import Addproducts from './AddProducts/Addproducts';
 import ManageProducts from './ManageProducts/ManageProducts/ManageProducts';
+import { Button } from 'react-bootstrap';
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -45,53 +40,48 @@ function Dashboard(props) {
 
     let { path, url } = useRouteMatch();
 
-    const { admin } = useAuth()
+    const { admin, user } = useAuth()
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
     const drawer = (
         <div>
-            <Toolbar />
+            <Toolbar>
+                <div style={{}}>
+                    <i className="fas fa-user"></i><span >  {user?.displayName} </span>
+                </div>
+            </Toolbar >
             <Divider />
             <ul style={{ textAlign: "left" }} >
-                <li><Link to="/home" style={{ textDecoration: "none" }}>Home</Link></li>
-                {
-                    !admin && <Box>
-                        <li><Link to={`${url}`} style={{ textDecoration: "none" }} > My Orders</Link></li>
-                        <li><Link to={`${url}/payment`} style={{ textDecoration: "none" }} > Payment</Link></li>
-                        <li><Link to={`${url}/review`} style={{ textDecoration: "none" }} > Review</Link></li>
-                    </Box>
-                }
+                <li><Link to="/home" style={{ textDecoration: "none" }}> <Button variant="contained">Home</Button> </Link></li>
+
                 {
                     admin && <Box>
-                        <li><Link to={`${url}/makeAdmin`} style={{ textDecoration: "none" }} > Make Admin</Link></li>
-                        <li><Link to={`${url}/allorders`} style={{ textDecoration: "none" }} > Manage All Orders</Link></li>
-                        <li><Link to={`${url}/addbikes`} style={{ textDecoration: "none" }} > Add A Bike</Link></li>
-                        <li><Link to={`${url}/manageproducts`} style={{ textDecoration: "none" }} > Manage Products</Link></li>
+                        <li><Link to={`${url}/makeAdmin`} style={{ textDecoration: "none" }} ><Button variant="contained"> Make Admin</Button></Link></li>
+                        <li><Link to={`${url}/allorders`} style={{ textDecoration: "none" }} ><Button variant="contained"> Manage All Orders</Button></Link></li>
+                        <li><Link to={`${url}/addbikes`} style={{ textDecoration: "none" }} ><Button variant="contained"> Add A Bike</Button></Link></li>
+                        <li><Link to={`${url}/manageproducts`} style={{ textDecoration: "none" }} ><Button variant="contained"> Manage Products</Button></Link></li>
+
                     </Box>
                 }
+
+                {
+                    !admin && <Box>
+                        <li><Link to={`${url}`} style={{ textDecoration: "none" }} > <Button variant="contained">My Orders</Button></Link></li>
+                        <li><Link to={`${url}/payment`} style={{ textDecoration: "none" }} ><Button variant="contained"> Payment</Button></Link></li>
+                        <li><Link to={`${url}/review`} style={{ textDecoration: "none" }} ><Button variant="contained"> Review</Button></Link></li>
+                    </Box>
+                }
+
                 <Divider />
-                <li> <Link to="/" onClick={logOut} style={{ textDecoration: "none" }}> Log Out</Link></li>
+                <li> <Link to="/" onClick={logOut} style={{ textDecoration: "none" }}><i className="fas fa-sign-out-alt"></i><Button variant="contained"> Log Out</Button></Link></li>
             </ul>
 
 
-
-
-
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
             <Divider />
 
-        </div>
+        </div >
     );
 
     const container = window !== undefined ? () => window().document.body : undefined;
