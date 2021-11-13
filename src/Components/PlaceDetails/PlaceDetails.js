@@ -51,7 +51,7 @@ const PlaceDetails = () => {
                 <div className="col">
                     <div className="">
 
-                        <img src="https://freepngimg.com/thumb/travel/30772-9-travel-transparent-image.png" width="250px" height="150px" alt="" />
+                        <img src="https://www.motorbeam.com/wp-content/uploads/Jawa-Forty-Two-Details.jpg" width="250px" height="150px" alt="" />
                         <h2 className="fw-bold text-success mb-5 border-bottom border-success">Booking Now</h2>
 
                         {/*                         <form className="order-form" onSubmit={handleSubmit(onSubmit)}>

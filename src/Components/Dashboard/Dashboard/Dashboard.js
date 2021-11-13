@@ -9,7 +9,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
+import "./Dashboard.css"
 
 import DashboardHome from './DashboardHome/DashboardHome';
 
@@ -29,7 +29,6 @@ import UserRoute from './../../Login/UserRoute/UserRoute'
 import AddReview from './Review/AddReview/AddReview';
 import Addproducts from './AddProducts/Addproducts';
 import ManageProducts from './ManageProducts/ManageProducts/ManageProducts';
-import { Button } from 'react-bootstrap';
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -46,36 +45,36 @@ function Dashboard(props) {
     };
 
     const drawer = (
-        <div>
-            <Toolbar>
-                <div style={{}}>
+        <div className='drawer' >
+            <Toolbar className='toolbar'>
+                <div >
                     <i className="fas fa-user"></i><span >  {user?.displayName} </span>
                 </div>
             </Toolbar >
             <Divider />
             <ul style={{ textAlign: "left" }} >
-                <li><Link to="/home" style={{ textDecoration: "none" }}> <Button variant="contained">Home</Button> </Link></li>
+                <li className="dashboardLink"><Link to="/home" style={{ textDecoration: "none", color: 'white' }}> Home </Link></li>
 
                 {
                     admin && <Box>
-                        <li><Link to={`${url}/makeAdmin`} style={{ textDecoration: "none" }} ><Button variant="contained"> Make Admin</Button></Link></li>
-                        <li><Link to={`${url}/allorders`} style={{ textDecoration: "none" }} ><Button variant="contained"> Manage All Orders</Button></Link></li>
-                        <li><Link to={`${url}/addbikes`} style={{ textDecoration: "none" }} ><Button variant="contained"> Add A Bike</Button></Link></li>
-                        <li><Link to={`${url}/manageproducts`} style={{ textDecoration: "none" }} ><Button variant="contained"> Manage Products</Button></Link></li>
+                        <li className="dashboardLink"><Link to={`${url}/makeAdmin`} style={{ textDecoration: "none", color: 'white' }} > Make Admin</Link></li>
+                        <li className="dashboardLink"><Link to={`${url}/allorders`} style={{ textDecoration: "none", color: 'white' }} > Manage All Orders</Link></li>
+                        <li className="dashboardLink"><Link to={`${url}/addbikes`} style={{ textDecoration: "none", color: 'white' }} > Add A Bike</Link></li>
+                        <li className="dashboardLink"><Link to={`${url}/manageproducts`} style={{ textDecoration: "none", color: 'white' }} > Manage Products</Link></li>
 
                     </Box>
                 }
 
                 {
                     !admin && <Box>
-                        <li><Link to={`${url}`} style={{ textDecoration: "none" }} > <Button variant="contained">My Orders</Button></Link></li>
-                        <li><Link to={`${url}/payment`} style={{ textDecoration: "none" }} ><Button variant="contained"> Payment</Button></Link></li>
-                        <li><Link to={`${url}/review`} style={{ textDecoration: "none" }} ><Button variant="contained"> Review</Button></Link></li>
+                        <li className="dashboardLink"><Link to={`${url}`} style={{ textDecoration: "none", color: 'white' }} >My Orders</Link></li>
+                        <li className="dashboardLink"><Link to={`${url}/payment`} style={{ textDecoration: "none", color: 'white' }} > Payment</Link></li>
+                        <li className="dashboardLink"><Link to={`${url}/review`} style={{ textDecoration: "none", color: 'white' }} > Review</Link></li>
                     </Box>
                 }
 
                 <Divider />
-                <li> <Link to="/" onClick={logOut} style={{ textDecoration: "none" }}><i className="fas fa-sign-out-alt"></i><Button variant="contained"> Log Out</Button></Link></li>
+                <li className="dashboardLink"> <Link to="/" onClick={logOut} style={{ textDecoration: "none", color: 'white' }}><i className="fas fa-sign-out-alt"></i> Log Out</Link></li>
             </ul>
 
 
