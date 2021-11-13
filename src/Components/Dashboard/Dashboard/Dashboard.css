@@ -15,6 +15,7 @@
   height: 100vh;
 }
 .drawer li {
-  margin-right: 20%;
+  /* margin-right: 20%; */
+  margin-left: -15%;
   font-weight: 300;
 }
