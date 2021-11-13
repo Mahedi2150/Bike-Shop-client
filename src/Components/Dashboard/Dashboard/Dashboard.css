@@ -14,3 +14,7 @@
   background: linear-gradient(to top, #6dd5ed, #2193b0);
   height: 100vh;
 }
+.drawer li {
+  margin-right: 20%;
+  font-weight: 300;
+}

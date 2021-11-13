@@ -17,7 +17,7 @@ const ManageProduct = (props) => {
                         <p><small>Product ID {_id}</small></p>
                         <p>Cost : &#2547; {price}</p>
                     </div>
-                    <Link ><button className="btn-danger px-4 py-1 rounded-2 border-0" onClick={() => props?.handelDeleteOrder(_id)}>Delete</button></Link>
+                    <button className="btn-danger px-4 py-1 rounded-2 border-0" onClick={() => props?.handelDeleteOrder(_id)}>Delete</button>
                 </div>
 
             </div>

@@ -10,7 +10,7 @@ const Service = (props) => {
 
 
             <Card>
-                <Card.Img variant="top" className="imgStyle" src={img} width="100%" />
+                <Card.Img variant="top" className="imgStyle" style={{ objectFit: "cover", height: "280px" }} src={img} width="100%" />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <div className="priceTimeStyle">

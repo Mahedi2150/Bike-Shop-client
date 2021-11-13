@@ -6,7 +6,7 @@ const ManageProducts = () => {
     const [services, setServices] = useState([]);
     // fetch the data from JSON file 
     useEffect(() => {
-        fetch('http://localhost:5000/bikes')
+        fetch('https://shrouded-anchorage-36881.herokuapp.com/bikes')
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
@@ -15,7 +15,7 @@ const ManageProducts = () => {
     const handelDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/bikes/${id}`;
+            const url = `https://shrouded-anchorage-36881.herokuapp.com/bikes/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -16,7 +16,7 @@ const AddReview = () => {
     const onSubmit = datas => {
         const data = { ...datas, "rating": value, "lables": labels[hover !== -1 ? hover : value], display: user?.displayName }
         console.log(data);
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://shrouded-anchorage-36881.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added Succesfully")
