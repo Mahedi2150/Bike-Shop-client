@@ -25,7 +25,7 @@ const Services = () => {
                 </Button> :
                 <div id="services" className="container">
 
-                    <h2 className="my-5 pb-3 border-bottom border-3 border-success">Best Bikes in Bangladesh</h2>
+                    <h2 className="my-5  pb-3 border-bottom border-3 border-success">Best Bikes in Bangladesh</h2>
                     <Row xs={1} md={2} lg={3} >
                         {
                             services.slice(0, 6).map(service => <Service

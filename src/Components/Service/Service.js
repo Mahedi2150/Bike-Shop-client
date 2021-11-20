@@ -9,15 +9,15 @@ const Service = (props) => {
         <div className="container">
 
 
-            <Card>
+            <Card style={{ marginTop: "25px", border: "2px solid black" }}>
                 <Card.Img variant="top" className="imgStyle" style={{ objectFit: "cover", height: "280px" }} src={img} width="100%" />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <div className="priceTimeStyle">
                         <Card.Text >Cost : &#2547; {price}</Card.Text>
-                        <Card.Text>{descrip}</Card.Text>
+                        <Card.Text className="">{descrip}</Card.Text>
                     </div>
-                    <Link to={`/bikes/${_id}`}><button className="btn-info px-4 py-1 rounded-2 border-0 ">Details</button></Link>
+                    <Link to={`/bikes/${_id}`}><button className="btn-info px-4 py-1 mt-2 rounded-2 border-0 ">Details</button></Link>
                 </Card.Body>
             </Card>
 
