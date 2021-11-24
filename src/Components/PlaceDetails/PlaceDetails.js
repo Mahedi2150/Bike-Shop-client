@@ -31,7 +31,7 @@ const PlaceDetails = () => {
                             <div className="card " style={{ maxWidth: "450px" }}>
                                 <div className="row g-0">
                                     <div className="">
-                                        <img src={bikes?.img} style={{ height: "250px" }} className="img-fluid rounded-start w-100" alt="..." />
+                                        <img src={bikes?.img} style={{ objectFit: "cover", height: "350px" }} className="img-fluid rounded-start w-100" alt="..." />
                                     </div>
                                     <div className="">
                                         <div className="card-body">
