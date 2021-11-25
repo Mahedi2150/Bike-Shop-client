@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import "./Banner.css";
 
 const Banner = () => {
@@ -17,7 +17,6 @@ const Banner = () => {
                         <p className="p-title">
                             Every ride turns into preparation for the next race with the stret legal
                         </p>
-                        <Button className="btn-visit p-2">Explore Places</Button>
                     </div>
                 </Col>
 
