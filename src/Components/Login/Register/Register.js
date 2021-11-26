@@ -32,7 +32,7 @@ const Register = () => {
         <Container sx={{ mt: 8 }}>
             <Grid container spacing={2}>
                 <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>
+                    <Typography sx={{ borderBottom: 1 }} variant="h4" gutterBottom>
                         Register
                     </Typography>
                     {!isLoading ? <form onSubmit={handleLoginSubmit}>
@@ -63,7 +63,17 @@ const Register = () => {
                             name="password2"
                             onBlur={handleonBlur}
                         />
-                        <Button sx={{ width: "75%", m: 1 }} variant='contained' type="submit"> Register</Button>
+                        <Button sx={{ width: "75%", m: 1 }}
+                            variant='contained' type="submit"
+                            style={{
+                                borderRadius: 35,
+                                backgroundColor: "#43a047",
+                                padding: "8px ",
+                                fontSize: "18px"
+                            }}
+                        >
+                            Register
+                        </Button>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to='/login'>

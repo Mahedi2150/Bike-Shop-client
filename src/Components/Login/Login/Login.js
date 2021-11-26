@@ -2,7 +2,9 @@ import { Container, Grid, TextField, Typography, Button, Alert, CircularProgress
 import React, { useState } from 'react';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 
-import login from '../../../images/login.png'
+
+import login from '../../../images/login.jpg'
+import Expire from '../Expire/Expire';
 import useAuth from './../../../hooks/useAuth';
 const Login = () => {
     const [loginData, setLoginData] = useState({})
@@ -34,8 +36,8 @@ const Login = () => {
                     <img style={{ width: "100%" }} src={login} alt="" />
                 </Grid>
                 <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>
-                        Login
+                    <Typography sx={{ borderBottom: 1 }} variant="h4" gutterBottom>
+                        LOGIN
                     </Typography>
                     <form onSubmit={handleLoginSubmit}>
                         <TextField sx={{ width: "75%", m: 1 }} id="standard-basic"
@@ -52,7 +54,17 @@ const Login = () => {
                             name="password"
                             onChange={handleOnChange}
                         />
-                        <Button sx={{ width: "75%", m: 1 }} variant='contained' type="submit"> Login</Button>
+                        <Button sx={{ width: "75%", m: 1 }}
+                            variant='contained' type="submit"
+                            style={{
+                                borderRadius: 35,
+                                backgroundColor: "#43a047",
+                                padding: "8px ",
+                                fontSize: "18px"
+                            }}
+                        >
+                            Login
+                        </Button>
                         <NavLink
                             style={{ textDecoration: 'none' }}
                             to='/register'>
@@ -60,8 +72,10 @@ const Login = () => {
                         </NavLink>
                     </form>
 
-                    <p>__________________________</p>
-                    <Button onClick={handleGoogleSignIn} variant="contained">Google SignIn</Button>
+                    <button onClick={handleGoogleSignIn} type="button" className="btn btn-light">
+                        <img src="https://img.icons8.com/color/24/000000/google-logo.png" />
+                        oogle sign in</button>
+                    <br />
 
                     {
                         isLoading && <CircularProgress />
@@ -70,7 +84,9 @@ const Login = () => {
                         user?.email && <Alert severity="success">User Login Successfully!!!</Alert>
                     }
                     {
-                        authError && <Alert severity="error">{authError}</Alert>
+                        authError && <Expire delay="5000">
+                            <Alert severity="error">{authError}</Alert>
+                        </Expire>
                     }
                 </Grid>
 
