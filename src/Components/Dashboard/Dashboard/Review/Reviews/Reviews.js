@@ -6,7 +6,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     // fetch the data from JSON file 
     useEffect(() => {
-        fetch('https://shrouded-anchorage-36881.herokuapp.com/reviews')
+        fetch('https://bike-shop.onrender.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, []);

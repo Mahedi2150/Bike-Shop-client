@@ -22,7 +22,7 @@ const Orderform = ({ bikes }) => {
 
         //console.log(data);
 
-        axios.post('https://shrouded-anchorage-36881.herokuapp.com/orders', data)
+        axios.post('https://bike-shop.onrender.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Added Succesfully")

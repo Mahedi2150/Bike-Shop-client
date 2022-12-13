@@ -12,7 +12,7 @@ const Myorders = () => {
     const [allorders, setAllorders] = useState([]);
 
     useEffect(() => {
-        fetch('https://shrouded-anchorage-36881.herokuapp.com/orders')
+        fetch('https://bike-shop.onrender.com/orders')
             .then(res => res.json())
             .then(data => setAllorders(data.filter(order => order?.mail == userEmail)))
     }, [allorders])
@@ -21,7 +21,7 @@ const Myorders = () => {
         console.log(id);
         const proceed = window.confirm('Are you sure, you want to delete order?');
         if (proceed) {
-            const url = `https://shrouded-anchorage-36881.herokuapp.com/orders/${id}`;
+            const url = `https://bike-shop.onrender.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -39,7 +39,7 @@ const Myorders = () => {
     const handelAcceptOrder = id => {
         const proceed = window.confirm('Are you sure, you want to Accept order?');
         if (proceed) {
-            const url = `https://shrouded-anchorage-36881.herokuapp.com/orders/${id}`;
+            const url = `https://bike-shop.onrender.com/orders/${id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {

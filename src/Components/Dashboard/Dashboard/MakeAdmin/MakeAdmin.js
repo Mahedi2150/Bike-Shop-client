@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email }
-        fetch('https://shrouded-anchorage-36881.herokuapp.com/users/admin', {
+        fetch('https://bike-shop.onrender.com/users/admin', {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

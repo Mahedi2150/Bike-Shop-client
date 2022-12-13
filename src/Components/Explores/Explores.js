@@ -6,7 +6,7 @@ import Explore from './../Explore/Explore';
 const Explores = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('https://shrouded-anchorage-36881.herokuapp.com/bikes')
+        fetch('https://bike-shop.onrender.com/bikes')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])

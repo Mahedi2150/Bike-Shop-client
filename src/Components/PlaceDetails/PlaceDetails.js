@@ -12,7 +12,7 @@ const PlaceDetails = () => {
     const { bikeID } = useParams();
     const [bikes, setBikes] = useState([])
     useEffect(() => {
-        fetch(`https://shrouded-anchorage-36881.herokuapp.com/bikes/${bikeID}`)
+        fetch(`https://bike-shop.onrender.com/bikes/${bikeID}`)
             .then(res => res.json())
             .then(data => setBikes(data))
     }, [])
