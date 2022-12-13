@@ -2,7 +2,7 @@
 
 live Site link (https://bike-site-da222.web.app/).
 
-server site link (https://github.com/programming-hero-web-course-4/niche-website-server-side-Mahedi2150)
+server site link (https://github.com/Mahedi2150/Bike-Shop-Server)
 
 <h3>About Speed World</h3>
 
